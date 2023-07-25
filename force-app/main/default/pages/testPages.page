@@ -1,0 +1,35 @@
+<apex:page standardController="Account" setup="false" sidebar="false" showHeader="true" tabStyle="Account" >
+    <apex:TabPanel switchtype="ajax" >
+        
+        <apex:tab label="Account Details" name="accDetails">
+            <apex:detail inlineEdit="true" showChatter="false" title="true" relatedList="false"/>
+        </apex:tab>
+        
+        <apex:tab label="Contacts" name="accContacts">
+            <apex:relatedList list="Contacts" pageSize="5" rendered="true"/>
+        </apex:tab>
+        
+        <apex:tab label="Opportunities" name="accOppty">
+            <apex:relatedList list="Opportunities" rendered="true" pageSize="10"/>
+        </apex:tab>
+        
+        <apex:tab label="Cases" name="accCases">
+            <apex:relatedList list="Cases" rendered="true" pageSize="10"/>
+        </apex:tab>
+        
+        <apex:tab label="Notes & Attachments" name="accAttachments"> 
+            <apex:relatedList list="CombinedAttachments" rendered="true" pageSize="5"/>
+        </apex:tab>
+        
+        <apex:tab label="Open Activities" name="accActivities">
+            <apex:relatedList list="OpenActivities" rendered="true" pageSize="5"/>
+        </apex:tab>
+        
+        <apex:tab label="Approval History" name="accApproval">
+            <apex:relatedList list="ProcessSteps" rendered="true" pageSize="5"/>
+        </apex:tab>
+        
+        
+        
+    </apex:TabPanel> 
+</apex:page>

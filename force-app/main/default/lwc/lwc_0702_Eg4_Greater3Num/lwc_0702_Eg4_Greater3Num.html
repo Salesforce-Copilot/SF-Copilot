@@ -1,0 +1,32 @@
+<template>
+    <!--
+    <lightning-card title="Greater of 3 Number">
+        First Numebr : {Num1} </br>
+        Second Numebr : {Num2} </br>
+        Third Numebr : {Num3} </br>
+    </br>
+        <lightning-input label="Enter First Number" onchange={firstnum} value={Num1}></lightning-input>
+        <lightning-input label="Enter Second Number" onchange={secondnum} value={Num2}></lightning-input>
+        <lightning-input label="Enter Third Number" onchange={thirdnum} value={Num3}></lightning-input>
+        
+        <lightning-button-group>
+        <lightning-button label="Calculate" onclick={calculateme}></lightning-button>
+        <lightning-button label="Clear" onclick={clearme}></lightning-button>
+        </lightning-button-group>
+        </lightning-card> 
+    -->
+        <lightning-card title="Greater of 3 Number unification ">
+            First Numebr : {Num1} </br>
+            Second Numebr : {Num2} </br>
+            Third Numebr : {Num3} </br>
+        </br>
+            <lightning-input label="Enter First Number" onchange={Capturedata} value={Num1} name={aval}></lightning-input>
+            <lightning-input label="Enter Second Number" onchange={Capturedata} value={Num2} name={bval}></lightning-input>
+            <lightning-input label="Enter Third Number" onchange={Capturedata} value={Num3} name={cval}></lightning-input>
+            
+            <lightning-button-group>
+            <lightning-button label="Calculate" onclick={calculateme}></lightning-button>
+            <lightning-button label="Clear" onclick={clearme}></lightning-button>
+            </lightning-button-group>
+            </lightning-card> 
+</template>

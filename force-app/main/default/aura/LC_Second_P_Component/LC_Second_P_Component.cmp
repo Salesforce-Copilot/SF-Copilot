@@ -1,0 +1,8 @@
+<aura:component >
+<aura:handler name="second" event="c:LE_Second_Event" action="{!c.GPME}"/>
+<lightning:card title="Grand Parent Component">
+   This is Grand Parent Component
+    {!empname}
+</lightning:card>
+<c:LC_Second_C_Component />
+</aura:component>

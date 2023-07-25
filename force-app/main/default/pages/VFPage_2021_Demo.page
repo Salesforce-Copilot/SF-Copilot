@@ -1,0 +1,72 @@
+<apex:page controller="StudentForm02Controller">
+  <apex:form >
+  <apex:pageblock title="Student Info">
+<apex:pageblocksection title="Personal Information">
+
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="First Name:"></apex:outputLabel>
+<apex:inputText value="{!fname}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="Last Name:"></apex:outputLabel>
+<apex:inputText value="{!lname}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="Mother Name:"></apex:outputLabel>
+<apex:inputText value="{!mname}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="Father Name:"></apex:outputLabel>
+<apex:inputText value="{!faname}"/>
+</apex:pageBlockSectionItem>
+
+</apex:pageblocksection>  
+
+<apex:pageblocksection title="Address">
+
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="Address1:"></apex:outputLabel>
+<apex:inputText />
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="Address2:"></apex:outputLabel>
+<apex:inputText />
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="City:"></apex:outputLabel>
+<apex:inputText />
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="Country:"></apex:outputLabel>
+<apex:inputText />
+</apex:pageBlockSectionItem>
+
+</apex:pageblocksection> 
+
+<apex:pageblocksection title="Other Information">
+
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="Phone:"></apex:outputLabel>
+<apex:inputText />
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="Mobile:"></apex:outputLabel>
+<apex:inputText />
+</apex:pageBlockSectionItem>
+
+</apex:pageblocksection>
+<apex:pageblockButtons location="Bottom">
+<apex:commandButton value="Save" action="{!CustomSave}"/>
+<apex:commandButton value="Cancel" action="{!CustomCancel}"/>
+
+</apex:pageblockButtons>  
+  </apex:pageblock>
+  </apex:form>
+</apex:page>

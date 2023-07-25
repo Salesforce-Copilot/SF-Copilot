@@ -1,0 +1,7 @@
+<aura:component>
+<lightning:card title="LT Component created from  MS VSC" iconName="standard:account">
+ <lightning:button label="Submit" onclick="{!c.callme}">
+
+ </lightning:button>   
+</lightning:card>
+</aura:component>

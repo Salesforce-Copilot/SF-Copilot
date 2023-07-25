@@ -1,0 +1,21 @@
+<apex:page standardController="Opportunity" extensions="ContctInfoDisplCntr" >
+  
+    <apex:pageMessages ></apex:pageMessages>
+    <apex:form >
+   <apex:pageBlock title="Contact Info" >
+       <apex:pageBlockTable value="{!listofWrapperInfo}" var="item" >
+          <!-- <apex:column value="{!item.isSelected}" />  -->
+           <apex:column headerValue="Primary">
+           <apex:inputCheckbox value="{!item.isSelected}"/>
+           </apex:column>
+           <apex:column value="{!item.cntRecord.Name}" />
+           <apex:column value="{!item.optRecord.name}" />
+           <apex:column value="{!item.optRecord.Stagename}" />
+       </apex:pageBlockTable>
+    <apex:pageBlockButtons >
+       <apex:commandButton value="Update" action="{!CustomUpdate}"/>
+        <apex:commandButton value="Cancel" action="{!CustomCancel}"/>
+       </apex:pageBlockButtons>
+    </apex:pageBlock>
+       </apex:form>
+</apex:page>

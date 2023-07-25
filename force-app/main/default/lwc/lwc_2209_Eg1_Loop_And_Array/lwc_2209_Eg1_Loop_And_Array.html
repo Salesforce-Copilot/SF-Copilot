@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title = "Loop and Array with - for:each">
+        city : {cities}  </br>
+        <template for:each={cities} for:item=a>
+       <!--Will Give a data in single line : {a} -->
+       will Give data in one by one line <p key={b}>{a}</p>
+        </template>
+        </lightning-card>
+        ===============================******************************==========================
+        <lightning-card title="Loop and Array with - Iteration">
+            <template iterator:item={cities}>
+            <p key={item.value}>{item.value}</p>
+            </template>
+            </lightning-card> 
+</template>

@@ -1,0 +1,38 @@
+<apex:page controller="SearchAcctPageDemoCntr" id="page1">
+    
+    <script type="text/javascript">
+function m1(){
+alert('entered into method====');
+var info=document.getElementById("{!$Component.page1.form1.pb1.txt}").value;
+    alert('info is ==='+info);
+    if(info=='') 
+       {
+       alert('please enter account name');
+          
+       }else{
+       callmethod();
+       }
+}
+
+</script>
+    
+    <apex:pageMessages ></apex:pageMessages>
+  <apex:form id="form1" >
+      <apex:actionFunction name="callmethod" action="{!customSearch}"/>
+  <apex:pageBlock title="Search Account Info" id="pb1">
+  <apex:outputLabel value="Enter Account Name : "/>
+  <apex:inputText value="{!inputInfo}" id="txt"/>
+  <apex:commandButton value="Search" onclick="m1(); return false"/>
+     
+  <apex:pageBlockTable value="{!acc}" var="item" rendered="{!showdisplay}">
+  <apex:column value="{!item.name}"/> 
+  </apex:pageBlockTable>  
+  </apex:pageBlock>
+      <apex:dataTable value="{!acc}" var="item" rendered="{!showdisplay}" >
+<apex:column >
+<apex:facet name="header">Name</apex:facet>
+<apex:outputText value="{!Item.name}"/>
+</apex:column>
+         </apex:dataTable>
+  </apex:form>
+</apex:page>

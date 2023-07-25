@@ -1,0 +1,21 @@
+<aura:component >
+	
+    <aura:attribute name="whom" type="String" default="SFDCPanther" access="public" />
+<aura:attribute name="age" type="integer" default="24" access="private" />
+<aura:attribute name="ContactObj" type="contact"  access="public" />
+
+
+<!--
+
+public string whom='SFDCPanther';
+public Contact ContactObj;
+
+-->
+    
+    welcome {!v.whom} , {!v.age}
+    <lightning:input aura:id="testInput" label="enter Age" />
+    <lightning:button value="Component Methods" label="Add" onclick="{!c.doAdd}" />
+    <lightning:button value="Component Methods" label="Sub" onclick="{!c.Sub}" />
+    <lightning:button value="Component Methods" label="Mul" onclick="{!c.Mul}" />
+    <lightning:button value="Component Methods" label="Div" onclick="{!c.doDiv}" />
+</aura:component>

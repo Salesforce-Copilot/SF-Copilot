@@ -1,0 +1,31 @@
+<aura:component >
+<aura:attribute name="acc" type="Account"  />  <!-- New Account (); default="{sObjectType:'Account'}" -->
+<aura:attribute name="con" type="Contact" default="{sObjectType:'Contact'}" />
+<aura:attribute name="pas" type="Employee__c" default="{sObjectType:'Employee__c'}" />
+<lightning:card title="Account">
+<aura:set attribute="actions">
+<lightning:button label="Submit" onclick="{!c.showme}"/>
+</aura:set>
+<lightning:input label="Account Name" value="{!v.acc.Name}"/>
+<lightning:input label="Account Phone" value="{!v.acc.Phone}"/>
+<lightning:input label="Account Fax" value="{!v.acc.Fax}"/>
+<lightning:input label="Account Industry" value="{!v.acc.Industry}"/>
+<lightning:input label="Account Rating" value="{!v.acc.Rating}"/>
+</lightning:card>
+<lightning:card title="Contact">
+<aura:set attribute="actions">
+<lightning:button label="Submit" onclick="{!c.showme}"/>
+</aura:set>
+<lightning:input label="Contact First Name" value="{!v.con.FirstName}"/>
+<lightning:input label="Cobtact Last Name" value="{!v.con.LastName}"/>
+<lightning:input label="Contact Email" value="{!v.con.Email}"/>
+</lightning:card>
+<lightning:card title="Passenger">
+<aura:set attribute="actions">
+<lightning:button label="Submit" onclick="{!c.showme}"/>
+</aura:set>
+<lightning:input label="Passenger First Name" value="{!v.pas.First_Name_del__c}"/>
+<lightning:input label="Passenger Last Name" value="{!v.pas.LastName__c}"/>
+<lightning:input label="Passenger State" value="{!v.pas.State__c}"/>
+</lightning:card>
+</aura:component>

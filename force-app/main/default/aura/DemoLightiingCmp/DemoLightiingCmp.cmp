@@ -1,0 +1,19 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="DemoLigh2021" >
+    
+    <aura:attribute name="fName" type="string"/>
+    <aura:attribute name="lName" type="string"/>
+    <aura:attribute name="mName" type="string"/>
+    <aura:attribute name="FatherName" type="string"/>
+    <aura:attribute name="street" type="string"/>
+    
+    
+    <lightning:input label="FirstName" type="text" value="{!v.fName}"/>
+    <lightning:input label="LastName" type="text" value="{!v.lName}"/>
+    <lightning:input label="MotherName" type="text" value="{!v.lName}"/>
+    <lightning:input label="FatherName" type="text" value="{!v.FatherName}"/>
+    <lightning:input label="Stree1" type="text" value="{!v.street}"/>
+    
+    <lightning:button variant="brand" label="Save"  onclick="{!c.customSave}" />
+     <lightning:button variant="brand" label="Cancel"  onclick="{!c.customCancel}" />
+	
+</aura:component>

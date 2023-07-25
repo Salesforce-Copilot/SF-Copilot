@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="LWC LDS LIGHTNING EDIT FORM">
+        <lightning-record-edit-form record-id={recordId} object-api-name="Contact">
+        <lightning-input-field field-name="FirstName"></lightning-input-field>
+        <lightning-input-field field-name="LastName"></lightning-input-field>
+        <lightning-input-field field-name="Email"></lightning-input-field>
+
+        <lightning-button label="cancel" onclick={callme} ></lightning-button>
+        
+        </lightning-record-edit-form>
+        </lightning-card>  
+</template>

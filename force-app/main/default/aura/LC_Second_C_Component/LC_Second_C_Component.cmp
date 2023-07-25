@@ -1,0 +1,10 @@
+<aura:component >
+<aura:attribute name="nm" type="String"/>
+<aura:registerEvent name="second" type="c:LE_Second_Event"/>
+    <aura:handler name="second" event="c:LE_Second_Event" action="{!c.CHILDME}"/>
+<lightning:card title="Child Component">
+    This is Child Component
+<lightning:input label="Enter The Name: " value="{!v.nm}"/>
+<lightning:button label="Submit" onclick="{!c.callme}"/>
+</lightning:card>
+</aura:component>
