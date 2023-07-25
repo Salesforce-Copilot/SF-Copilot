@@ -4,4 +4,13 @@ export default class HelloWorld extends LightningElement {
   changeHandler(event) {
     this.greeting = event.target.value;
   }
+  //compute date difference
+  get capitalizedGreeting() {   
+   
+  }
+  //get all the image with alternate text
+  //add the red border color
+  get redBorder(){  
+   
+  }   
 }
